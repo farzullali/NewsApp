@@ -30,20 +30,29 @@ A full-stack news application with a React Native mobile app and NestJS backend 
 git clone [repository-url]
 cd news-app
 
-# Install dependencies
+# Install backend dependencies
+cd newsBack
+npm install
+cd ..
+
+# Install mobile dependencies
+cd mobile
 npm install
 
 # iOS setup
 cd ios && pod install && cd ..
+cd ..
 ```
 
 ### Running the App
 
 ```bash
-# Start backend API
+# Start backend API (from newsBack folder)
+cd newsBack
 npm run dev
 
-# Start mobile app
+# In another terminal, start mobile app (from mobile folder)
+cd mobile
 npm run ios     # iOS
 npm run android # Android
 ```
@@ -51,21 +60,23 @@ npm run android # Android
 ## 📁 Project Structure
 
 ```
-├── src/                    # React Native App
-│   ├── api/               # API services
-│   ├── components/        # Reusable UI components
-│   ├── screens/           # App screens
-│   ├── hooks/             # Custom React hooks
-│   ├── store/             # State management
-│   ├── navigation/        # Navigation setup
-│   └── utils/             # Utilities
-├── backend/               # NestJS API
-│   ├── controllers/       # Request handlers
-│   ├── services/          # Business logic
-│   ├── dtos/              # Data transfer objects
-│   └── models/            # Data models
-├── ios/                   # iOS native code
-└── android/               # Android native code
+├── mobile/                # React Native App
+│   ├── src/
+│   │   ├── api/          # API services
+│   │   ├── components/   # Reusable UI components
+│   │   ├── screens/      # App screens
+│   │   ├── hooks/        # Custom React hooks
+│   │   ├── store/        # State management
+│   │   └── utils/        # Utilities
+│   ├── ios/              # iOS native code
+│   └── android/          # Android native code
+└── newsBack/             # NestJS Backend API
+    ├── src/
+    │   ├── controllers/  # Request handlers
+    │   ├── services/     # Business logic
+    │   ├── dtos/         # Data transfer objects
+    │   └── models/       # Data models
+    └── dist/             # Compiled output
 ```
 
 ## 🛠️ Tech Stack
