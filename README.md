@@ -10,7 +10,6 @@ A full-stack news application with a React Native mobile app and NestJS backend 
 ## 📱 Features
 
 - **News Feed**: Browse latest articles with pagination
-- **Search & Filter**: Find news by category, country, or keywords
 - **Offline Support**: Read cached articles without internet
 - **Favorites**: Save and manage favorite articles
 - **Dark/Light Theme**: Customizable app appearance
